@@ -1,7 +1,7 @@
-# plantid
+# Plant Morphology App
+ 
+### This Application Is A Dichotomous Plant Identification Key
 
-Social Plant Identification Community
+This application, in conjunction with a separate image matching software I am also developing, is a reliable way to identify different plant species. It adds an additional degree of certainty to image matching methods and human visual perception alone.
 
-Taxonomy Field Guid and Plant Community Wiki
-
-More Information about how or why this works: http://mezcel.wixsite.com/plantmorphology
+[PlantApp Website](http://mezcel.wixsite.com/plantmorphology) More Information about how & why this works
