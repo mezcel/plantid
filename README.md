@@ -1,3 +1,6 @@
+Notice! This is not a Git Project, enclosed are just coppies of my code
+
+
 # Plant Morphology App
  
 ### This Application Is A Dichotomous Plant Identification Key
