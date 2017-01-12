@@ -1,4 +1,4 @@
-Notice !!! This is not a GIT, this just working backup code
+Notice !!! This is not a GIT, this is just working backup code
 
 # BACKYARD GPS
 
