@@ -1,2 +1,2 @@
-$ cat .gitattributes
-*.rb linguist-language=MySql
+* text=auto
+*.cs     diff=csharp
