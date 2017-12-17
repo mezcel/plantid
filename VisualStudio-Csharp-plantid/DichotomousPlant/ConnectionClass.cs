@@ -3,7 +3,7 @@ using System.Collections;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 //entity related
 using TaxononmyEntities;
@@ -14,11 +14,11 @@ using MySql.Data.MySqlClient; //use mysql
 
 namespace DichotomousPlant
 {
-    
+
 
     public static class ConnectionClass
     {
-        private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=Sumano00!;";
+        private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
 
         public static string GlobalConnectionVarClass
         {
@@ -34,17 +34,17 @@ namespace DichotomousPlant
 
         static ConnectionClass()
         {
-       
+
             string connectionString = DichotomousPlant.ConnectionClass.GlobalConnectionVarClass;
 
-            MySqlConnection conn = new MySqlConnection(connectionString); 
+            MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand command = new MySqlCommand("", conn);
 
 
         }
 
         #region morphology
-        
+
         public static string input_LeafMorphRecord(leafMorph input_leafMorph)
         {
             MySqlConnection conn = new MySqlConnection(DichotomousPlant.ConnectionClass.GlobalConnectionVarClass);
@@ -83,7 +83,7 @@ namespace DichotomousPlant
             // string querycountstring = "SELECT COUNT(*) FROM dbo.leafMorph WHERE ((species_FK = " + input_leafMorph.species_FK + ") AND " + " (leafArrangement_FK = " + input_leafMorph.leafArrangement_FK + ") AND " + "(leafStructure_FK = " + input_leafMorph.leafStructure_FK + ") AND " + " (leafMargin_FK = " + input_leafMorph.leafMargin_FK + ") AND " + "(leafAttachment_FK = " + input_leafMorph.leafAttachment_FK + ") AND " + "(leafShape_FK = " + input_leafMorph.leafShape_FK + ") AND " + "(leafApex_FK = " + input_leafMorph.leafApex_FK + ") AND " + "(leafBase_FK = " + input_leafMorph.leafBase_FK + ") AND " + "(leafSurfaceTop_FK = " + input_leafMorph.leafSurfaceTop_FK + ") AND " + "(leafSurfaceBottom_FK = " + input_leafMorph.leafSurfaceBottom_FK + ") AND " + "(leafVenation_FK = " + input_leafMorph.leafVenation_FK + ") AND " + "(leafHairsTop_FK = " + input_leafMorph.leafHairsTop_FK + ") AND " + "(leafHairsBottom_FK = " + input_leafMorph.leafHairsBottom_FK + "))";
 
             string querycountstring = "SELECT COUNT(*) FROM plantdb.leafMorph WHERE ((species_FK = " + input_leafMorph.species_FK + ") AND " + " (leafArrangement_FK = " + input_leafMorph.leafArrangement_FK + ") AND " + "(leafStructure_FK = " + input_leafMorph.leafStructure_FK + ") AND " + " (leafMargin_FK = " + input_leafMorph.leafMargin_FK + ") AND " + "(leafAttachment_FK = " + input_leafMorph.leafAttachment_FK + ") AND " + "(leafShape_FK = " + input_leafMorph.leafShape_FK + ") AND " + "(leafApex_FK = " + input_leafMorph.leafApex_FK + ") AND " + "(leafBase_FK = " + input_leafMorph.leafBase_FK + ") AND " + "(leafSurfaceTop_FK = " + input_leafMorph.leafSurfaceTop_FK + ") AND " + "(leafSurfaceBottom_FK = " + input_leafMorph.leafSurfaceBottom_FK + ") AND " + "(leafVenation_FK = " + input_leafMorph.leafVenation_FK + ") AND " + "(leafHairsTop_FK = " + input_leafMorph.leafHairsTop_FK + ") AND " + "(leafHairsBottom_FK = " + input_leafMorph.leafHairsBottom_FK + "))";
-            
+
             MySqlConnection conn = new MySqlConnection(DichotomousPlant.ConnectionClass.GlobalConnectionVarClass);
             MySqlCommand command = conn.CreateCommand();
 
@@ -119,7 +119,7 @@ namespace DichotomousPlant
             conn.Open();
 
             //SqlDataReader reader = command.ExecuteReader();
-            
+
             MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
@@ -151,7 +151,7 @@ namespace DichotomousPlant
 
         #region species
 
-        public static string input_SpeciesRecord(species input_species) 
+        public static string input_SpeciesRecord(species input_species)
         {
             MySqlConnection conn = new MySqlConnection(DichotomousPlant.ConnectionClass.GlobalConnectionVarClass);
 
@@ -253,7 +253,7 @@ namespace DichotomousPlant
 
             return speciesEntityrecord;
         }
-        
+
         #endregion species
     }
 }
