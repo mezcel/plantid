@@ -18,7 +18,7 @@ namespace DichotomousPlant
 
     public static class ConnectionClass
     {
-        private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
+        private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;"; // [yourserverpw] is whatever your server wants it to be
 
         public static string GlobalConnectionVarClass
         {
