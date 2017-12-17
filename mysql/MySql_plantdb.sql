@@ -8,18 +8,26 @@ CREATE DATABASE `plantdb`;
 
 */
 
-/* =========================== Leaf Taxonomy ======================================*/
+-- -----------------------------------------------------
+-- Schema plantdb
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `plantdb` ;
+CREATE SCHEMA IF NOT EXISTS `plantdb` DEFAULT CHARACTER SET utf8 ;
+USE `plantdb` ;
 
+
+/* =========================== Leaf Taxonomy ======================================*/
+DROP TABLE IF EXISTS `plantdb`.`plantclass` ;
 CREATE TABLE plantclass
 (
     plantclassID    INT NOT NULL,
     plantclassName varchar(20) NULL,
 	plantclassDescription varchar(1000) NULL,
     CONSTRAINT PK_plantclass PRIMARY KEY CLUSTERED (plantclassID ASC)
-); 
+);
 
 /* ------- Order  Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`plantorder` ;
 CREATE TABLE plantorder
 (
     plantorderID   INT NOT NULL,
@@ -28,10 +36,10 @@ CREATE TABLE plantorder
 	plantclass_FK INT NOT NULL,
     CONSTRAINT PK_plantorder PRIMARY KEY CLUSTERED (plantorderID ASC),
 	CONSTRAINT FK_plantclass FOREIGN KEY (plantclass_FK) REFERENCES plantclass (plantclassID)
-); 
+);
 
 /* ------- Family Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`family` ;
 CREATE TABLE family
 (
     familyID  INT NOT NULL,
@@ -43,7 +51,7 @@ CREATE TABLE family
 );
 
 /* ------- Genus Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`genus` ;
 CREATE TABLE genus
 (
     genusID   INT NOT NULL,
@@ -53,9 +61,9 @@ CREATE TABLE genus
     CONSTRAINT PK_genus PRIMARY KEY CLUSTERED (genusID ASC),
 	CONSTRAINT FK_family FOREIGN KEY (family_FK) REFERENCES family (familyID)
 );
- 
-/* ------- Species Table -------*/
 
+/* ------- Species Table -------*/
+DROP TABLE IF EXISTS `plantdb`.`species` ;
 CREATE TABLE species
 (
     speciesID   INT NOT NULL,
@@ -70,27 +78,27 @@ CREATE TABLE species
 /* =========================== Leaf Morphology ====================================== */
 
 /* ------- arrangement Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafArrangement` ;
 CREATE TABLE leafArrangement
 (
 	leafArrangementID  INT NOT NULL,
 	leafArrangementName varchar(50) NULL,
 	leafArrangementDescription varchar(1000) NULL,
 	CONSTRAINT PK_leafArrangement PRIMARY KEY CLUSTERED (leafArrangementID ASC)
-); 
+);
 
 /* ------- structure Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafStructure` ;
 CREATE TABLE leafStructure
 (
 	leafStructureID  INT NOT NULL,
 	leafStructureName varchar(50) NULL,
 	leafStructureDescription varchar(1000) NULL,
 	CONSTRAINT PK_leafStructure PRIMARY KEY CLUSTERED (leafStructureID ASC)
-); 
+);
 
 /* ------- margin Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafMargin` ;
 CREATE TABLE leafMargin
 (
 	leafMarginID  INT NOT NULL,
@@ -100,7 +108,7 @@ CREATE TABLE leafMargin
 );
 
 /* ------- attachment Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafAttachment` ;
 CREATE TABLE leafAttachment
 (
 	leafAttachmentID  INT NOT NULL,
@@ -110,7 +118,7 @@ CREATE TABLE leafAttachment
 );
 
 /* ------- shape Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafShape` ;
 CREATE TABLE leafShape
 (
 	leafShapeID  INT NOT NULL,
@@ -120,27 +128,27 @@ CREATE TABLE leafShape
 );
 
 /* ------- surface Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafSurface` ;
  CREATE TABLE leafSurface
 (
 	leafSurfaceID  INT NOT NULL,
 	leafSurfaceName varchar(50) NULL,
 	leafSurfaceDescription varchar(1000) NULL,
 	CONSTRAINT PK_leafSurface PRIMARY KEY CLUSTERED (leafSurfaceID ASC)
-); 
+);
 
 /* ------- venation Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafVenation` ;
  CREATE TABLE leafVenation
 (
 	leafVenationID  INT NOT NULL,
 	leafVenationName varchar(50) NULL,
 	leafVenationDescription varchar(1000) NULL,
 	CONSTRAINT PK_leafVenation PRIMARY KEY CLUSTERED (leafVenationID ASC)
-); 
+);
 
 /* ------- hair Morphology Table -------*/
-
+DROP TABLE IF EXISTS `plantdb`.`leafHairs` ;
 CREATE TABLE leafHairs
 (
 	leafHairsID  INT NOT NULL,
@@ -150,10 +158,10 @@ CREATE TABLE leafHairs
 );
 
 
- 
+ DROP TABLE IF EXISTS `plantdb`.`leafMorph` ;
  CREATE TABLE leafMorph
 (
-	leafMorphID  INT NOT NULL,	
+	leafMorphID  INT NOT NULL,
 	species_FK INT NULL,
 	leafArrangement_FK INT NULL,
 	leafStructure_FK INT NULL,
@@ -176,7 +184,7 @@ CREATE TABLE leafHairs
 );
 
 /*
-MS Sql Inserts
+MySql Sql Inserts
 Taxonomy from: http://www.itis.gov/
 */
 
@@ -358,11 +366,11 @@ INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAtt
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('1','Amplexicaule','Leaves with basal lobes that wrap around or clasp the main stem.');
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('2','Connate-Perfoliate','with bases of opposite leaves fused around the stem, which appear to go through the leaf.');
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('3','Ocrea','"leggings", a plant structure formed of stipules fused into a sheath surrounding the stem, and is typically found in the Polygonaceae.');
-INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('4','Peltate','Peltate leaves are rounded with the petiole attached underneath the base of the leaf'); 
+INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('4','Peltate','Peltate leaves are rounded with the petiole attached underneath the base of the leaf');
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('5','Perfoliate','Leaves united at the base so that they appear to be pierced by the main stem. surrounding stem');
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('6','Petioled','Leaves with a definite footstalk or stem (petiole), long or short.');
 INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('7','Sessile','Leaves without any footstalk or stem.');
-INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('8','Sheathing','with a tubular portion of the leaf blade surrounding the stem below the base.'); 
+INSERT INTO `leafattachment` (`leafAttachmentID`, `leafAttachmentName`, `leafAttachmentDescription`) VALUES ('8','Sheathing','with a tubular portion of the leaf blade surrounding the stem below the base.');
 
 
 
@@ -484,16 +492,18 @@ INSERT INTO `leafHairs` (`leafHairsID`, `leafHairsName`, `leafHairsDescription`)
 /* ------------------- leafMorph Table INSERT ----------------------------- */
 
 INSERT INTO `leafMorph` (`leafMorphID`, `species_FK`, `leafArrangement_FK`, `leafStructure_FK`, `leafMargin_FK`, `leafAttachment_FK`, `leafShape_FK`, `leafSurface_FK`, `leafVenation_FK`, `leafHairs_FK`) VALUES ('0','0','0','0','0','0','0','0','0','0');
+INSERT INTO `leafMorph` (`leafMorphID`, `species_FK`, `leafArrangement_FK`, `leafStructure_FK`, `leafMargin_FK`, `leafAttachment_FK`, `leafShape_FK`, `leafSurface_FK`, `leafVenation_FK`, `leafHairs_FK`) VALUES ('1','1','6','4','8','0','18','0','7','0');
+INSERT INTO `leafMorph` (`leafMorphID`, `species_FK`, `leafArrangement_FK`, `leafStructure_FK`, `leafMargin_FK`, `leafAttachment_FK`, `leafShape_FK`, `leafSurface_FK`, `leafVenation_FK`, `leafHairs_FK`) VALUES ('2','33','1','4','8','6','14','2','8','12');
 
 
 
 /*  ===================================== Image Database ===================================== */
 
 /*--------------------- Arrangment ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`arrangementImage` ;
 CREATE TABLE arrangementImage
 (
-    arrangementImageID   INT NOT NUL,
+    arrangementImageID   INT NOT NULL,
     arrangementImageName varchar(20) NULL,
 	arrangementImageDescription varchar(1000) NULL,
 	arrangementImagePath varchar(100) NULL,
@@ -514,10 +524,10 @@ INSERT INTO `arrangementImage` (`arrangementImageID`, `arrangementImageName`, `a
 
 
 /*--------------------- Structure ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`structureImage` ;
 CREATE TABLE structureImage
 (
-    structureImageID   INT NOT NUL,
+    structureImageID   INT NOT NULL,
     structureImageName varchar(20) NULL,
 	structureImageDescription varchar(1000) NULL,
 	structureImagePath varchar(100) NULL,
@@ -535,16 +545,16 @@ INSERT INTO `structureImage` (`structureImageID`, `structureImageName`, `structu
 
 
 /*--------------------- Margin ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`marginImage` ;
 CREATE TABLE marginImage
 (
-    marginImageID   INT NOT NUL,
+    marginImageID   INT NOT NULL,
     marginImageName varchar(20) NULL,
 	marginImageDescription varchar(1000) NULL,
 	marginImagePath varchar(100) NULL,
     CONSTRAINT PK_marginImage PRIMARY KEY CLUSTERED (marginImageID ASC)
 );
- 
+
 /* ------------------- marginImage Table INSERT ----------------------------- */
 
 INSERT INTO `marginImage` (`marginImageID`, `marginImageName`, `marginImageDescription`, `marginImagePath`) VALUES ('0','','','~/Images/arrangement/blankmargin.jpg');
@@ -565,10 +575,10 @@ INSERT INTO `marginImage` (`marginImageID`, `marginImageName`, `marginImageDescr
 
 
 /*--------------------- Attachment ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`attachmentImage` ;
 CREATE TABLE attachmentImage
 (
-    attachmentImageID   INT NOT NUL,
+    attachmentImageID   INT NOT NULL,
     attachmentImageName varchar(20) NULL,
 	attachmentImageDescription varchar(1000) NULL,
 	attachmentImagePath varchar(100) NULL,
@@ -581,19 +591,19 @@ INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `atta
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('1','Amplexicaule','Leaves with basal lobes that wrap around or clasp the main stem.','~/Images/attachment/amplexicaule.jpg');
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('2','Connate-Perfoliate','with bases of opposite leaves fused around the stem, which appear to go through the leaf.','~/Images/attachment/connate_perfoliate.jpg');
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('3','Ocrea','"leggings", a plant structure formed of stipules fused into a sheath surrounding the stem, and is typically found in the Polygonaceae.','~/Images/attachment/ocrea.jpg');
-INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('4','Peltate','Peltate leaves are rounded with the petiole attached underneath the base of the leaf','~/Images/attachment/peltate.jpg'); 
+INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('4','Peltate','Peltate leaves are rounded with the petiole attached underneath the base of the leaf','~/Images/attachment/peltate.jpg');
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('5','Perfoliate','Leaves united at the base so that they appear to be pierced by the main stem. surrounding stem','~/Images/attachment/perfoliate.jpg');
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('6','Petioled','Leaves with a definite footstalk or stem (petiole), long or short.','~/Images/attachment/petioled.jpg');
 INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('7','Sessile','Leaves without any footstalk or stem.','~/Images/attachment/sessile.jpg');
-INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('8','Sheathing','with a tubular portion of the leaf blade surrounding the stem below the base.','~/Images/attachment/sheathing.jpg'); 
+INSERT INTO `attachmentImage` (`attachmentImageID`, `attachmentImageName`, `attachmentImageDescription`, `attachmentImagePath`) VALUES ('8','Sheathing','with a tubular portion of the leaf blade surrounding the stem below the base.','~/Images/attachment/sheathing.jpg');
 
 
 
 /*--------------------- Shape ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`shapeImage` ;
 CREATE TABLE shapeImage
 (
-    shapeImageID   INT NOT NUL,
+    shapeImageID   INT NOT NULL,
     shapeImageName varchar(20) NULL,
 	shapeImageDescription varchar(1000) NULL,
 	shapeImagePath varchar(100) NULL,
@@ -603,32 +613,32 @@ CREATE TABLE shapeImage
 /* ------------------- shapeImage Table INSERT ----------------------------- */
 
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('0', '', '','~/Images/attachment/blankshape.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('1', 'Awl-shaped', 'Tapering to slender stiff point; Short stiff margins narrowing to a point, often sharp','~/Images/attachment/awl_shaped.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('1', 'Awl-shaped', 'Tapering to slender stiff point; Short stiff margins narrowing to a point, often sharp','~/Images/attachment/awl_shaped.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('2', 'Cuneate', 'Cuneate leaves have a small width at base, but then a broad width near the top before the apex. \"wedge-shaped.\"','~/Images/attachment/cuneate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('3', 'Cordate', 'Leaves heart-shaped with the lobes at the base of the leaf.','~/Images/attachment/cordate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('4', 'Deltoid', 'Triangular like the Greek letter delta, bottom two corners often rounded off.','~/Images/attachment/deltoid.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('5', 'Elliptical', 'Leaves shaped like an ellipse; that is, generally symmetrical, elongated, and more or less evenly rounded at both ends.','~/Images/attachment/elliptical.jpg'); 
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('6', 'Falcate', 'A hooked leaf, similar to a sickle or beak of a falcon.','~/Images/attachment/falcate.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('5', 'Elliptical', 'Leaves shaped like an ellipse; that is, generally symmetrical, elongated, and more or less evenly rounded at both ends.','~/Images/attachment/elliptical.jpg');
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('6', 'Falcate', 'A hooked leaf, similar to a sickle or beak of a falcon.','~/Images/attachment/falcate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('7', 'Flabellate', 'Fan-like or fan-shaped. The Ginkgo is the only woody plant in Central Illinois that has this type of leaf shape.','~/Images/attachment/flabellate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('8', 'Hastate', 'Hastate leaves are very recognizable. They are taper off at three apexes and are arrowhead-shaped.','~/Images/attachment/hastate.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('9', 'Lanceolate', 'Leaves shaped like a lance-head, much longer than wide, and, in technical usage, broader towards the base.','~/Images/attachment/lanceolate.jpg'); 
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('10', 'Linear', 'Leaves long and thin, many times longer than wide, with parallel margins.','~/Images/attachment/linear.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('9', 'Lanceolate', 'Leaves shaped like a lance-head, much longer than wide, and, in technical usage, broader towards the base.','~/Images/attachment/lanceolate.jpg');
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('10', 'Linear', 'Leaves long and thin, many times longer than wide, with parallel margins.','~/Images/attachment/linear.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('11', 'Needle', 'needle shape','~/Images/attachment/needle.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('12', 'Obcordate', 'Leaves heart-shaped with the tip at the base of the leaf.','~/Images/attachment/obcordate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('13', 'Oblanceolate', 'Oblanceolate leaves are at least 3x longer than wide, but broadest above middle. Reverse of a Lanceolate leaf','~/Images/attachment/oblanceolate.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('14', 'Oblong', 'Oblong leaves are 2-3x as long as wide and have parallel sides.','~/Images/attachment/oblong.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('14', 'Oblong', 'Oblong leaves are 2-3x as long as wide and have parallel sides.','~/Images/attachment/oblong.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('15', 'Obovate', 'An Obovate leaf is described as being broadest above the middle, and roughly 2x as long as it is wide. Reverse of Ovate','~/Images/attachment/obovate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('16', 'Orbicular', 'Circular or rounded in leaf.','~/Images/attachment/orbicular.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('17', 'Ovate', 'An Ovate leaf is described as being broadest below the middle','~/Images/attachment/oeedle.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('18', 'Palmate', 'Particular shape of leaf where the main leaf veins begin at the same place near the leaf stem. Named after the shape of a hand with the fingers spread wide. Maple is the classic example of \"palmate-shaped\" leaves.','~/Images/attachment/palmate.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('18', 'Palmate', 'Particular shape of leaf where the main leaf veins begin at the same place near the leaf stem. Named after the shape of a hand with the fingers spread wide. Maple is the classic example of \"palmate-shaped\" leaves.','~/Images/attachment/palmate.jpg');
 INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('19', 'Peltate', 'Peltate leaves are rounded with the petiole attached underneath the base of the leaf. shaped like little shields','~/Images/attachment/peltate.jpg');
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('20', 'Reniform', 'Reniform leaves are broad and wider than they are high.','~/Images/attachment/reniform.jpg'); 
-INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('21', 'Spatulate', 'Spatulate leaves are narrow for almost the entire leaf, but then have an abrupt round structure at the apex. similar shape to a spatula','~/Images/attachment/spatulate.jpg'); 
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('20', 'Reniform', 'Reniform leaves are broad and wider than they are high.','~/Images/attachment/reniform.jpg');
+INSERT INTO `shapeImage` (`shapeImageID`, `shapeImageName`, `shapeImageDescription`, `shapeImagePath`) VALUES ('21', 'Spatulate', 'Spatulate leaves are narrow for almost the entire leaf, but then have an abrupt round structure at the apex. similar shape to a spatula','~/Images/attachment/spatulate.jpg');
 
 
 
 /*--------------------- Surface ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`surfaceImage` ;
 CREATE TABLE surfaceImage
 (
     surfaceImageID   INT NOT NULL,
@@ -658,7 +668,7 @@ INSERT INTO `surfaceImage` (`surfaceImageID`, `surfaceImageName`, `surfaceImageD
 
 
 /*--------------------- Venation ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`venationImage` ;
 CREATE TABLE venationImage
 (
     venationImageID   INT NOT NULL,
@@ -684,7 +694,7 @@ INSERT INTO `venationImage` (`venationImageID`, `venationImageName`, `venationIm
 
 
 /*--------------------- Hairs ------------------------------*/
-
+DROP TABLE IF EXISTS `plantdb`.`hairsImage` ;
 CREATE TABLE hairsImage
 (
     hairsImageID   INT NOT NULL,
@@ -734,5 +744,3 @@ INSERT INTO `hairsImage` (`hairsImageID`, `hairsImageName`, `hairsImageDescripti
 INSERT INTO `hairsImage` (`hairsImageID`, `hairsImageName`, `hairsImageDescription`, `hairsImagePath`) VALUES ('36','uncinate','hooked at the tip','~/Images/attachment/uncinate.jpg');
 INSERT INTO `hairsImage` (`hairsImageID`, `hairsImageName`, `hairsImageDescription`, `hairsImagePath`) VALUES ('37','velutinous','velvety with erect, straight, moderately firm hairs','~/Images/attachment/velutinous.jpg');
 INSERT INTO `hairsImage` (`hairsImageID`, `hairsImageName`, `hairsImageDescription`, `hairsImagePath`) VALUES ('38','villous','shaggy with long, soft, not matted hairs','~/Images/attachment/villous.jpg');
-
-
