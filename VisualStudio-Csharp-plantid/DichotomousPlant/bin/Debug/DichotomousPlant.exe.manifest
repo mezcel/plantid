@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DichotomousPlant.exe" size="2042368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DichotomousPlant.exe" size="2043904">
       <assemblyIdentity name="DichotomousPlant" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C6Ve121YkFGJ/lcjftrvt3eFS3qXpWQAtLKNTENl8kM=</dsig:DigestValue>
+        <dsig:DigestValue>eKsf0G08ir/97uIvDxEzupEf9meVY677fTP+K9LTp2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

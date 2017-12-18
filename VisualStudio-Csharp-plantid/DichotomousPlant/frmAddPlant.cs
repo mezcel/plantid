@@ -318,7 +318,6 @@ namespace DichotomousPlant
         private void btnAddNewSpecies_Click(object sender, EventArgs e)
         {
             string speciesString = txtSpecies.Text;
-            //string commonnameString = txtCommonName.Text;
             string symbolString = txtSpeciesSymbol.Text;
             string speciesdescriptionString = txtDescription.Text;
 
@@ -355,9 +354,7 @@ namespace DichotomousPlant
                 lblAddNewPlant.BackColor = Color.MistyRose;
 
                 lblNewSpecies.ForeColor = Color.Red;
-                lblNewSpecies.BackColor = Color.MistyRose;
-
-                
+                lblNewSpecies.BackColor = Color.MistyRose;                
 
                 txtSpecies.BackColor = Color.MistyRose;
                 rectangleShapeModifyNewPlant.BackColor = Color.MistyRose;
@@ -368,8 +365,6 @@ namespace DichotomousPlant
                 lblConfirmAdd.Text = "!!! Species (input) was left 'Blank/Empty'. !!!";
 
             }
-
-
             
         }
 
@@ -381,7 +376,6 @@ namespace DichotomousPlant
         public void refreshInputs()
         {
             txtSpecies.Text = "";
-            txtCommonName.Text = "";
             txtSpeciesSymbol.Text = "";
             txtDescription.Text = "";
             txtSpecies.BackColor = Color.White;

@@ -425,10 +425,6 @@ namespace DichotomousPlant
         {
             // this function writes an sql query based on the checkboxes selected
 
-            /*
-             * string fieldColumn = "speciesCommonName";
-            string indexField = "speciesID";
-            */
             string fieldColumn = "speciesDescription";
             string indexField = "speciesID";
 

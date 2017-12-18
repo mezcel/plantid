@@ -32,8 +32,6 @@ C:\Users\Michael\Documents\Visual Studio 2012\Projects\DichotomousPlant_safetySa
 C:\Users\Michael\Documents\Visual Studio 2012\Projects\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.exe.manifest
 C:\Users\Michael\Documents\Visual Studio 2012\Projects\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.application
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\bin\Debug\DichotomousPlant.exe.config
-D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.exe
-D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.pdb
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\bin\Debug\DichotomousPlant.exe.manifest
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\bin\Debug\DichotomousPlant.application
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\bin\Debug\DichotomousPlant.exe
@@ -46,3 +44,5 @@ D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.csproj.GenerateResource.Cache
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.exe.manifest
 D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.application
+D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.exe
+D:\VisualStudio\DichotomousPlant_safetySave_5\DichotomousPlant\DichotomousPlant\obj\Debug\DichotomousPlant.pdb
