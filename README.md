@@ -11,6 +11,8 @@ ___Update Disclaimer:___
     For now I feel it is safest to stick with the Sql as-is, and tailor the C# around the Sql. After it works, I will make a new version with ```views``` and ```sql logic``` for efficient interfacing between the Plant Add Form and the Plan Query Form.
 ---
 
+[Wiki - PlantApp Website](http://mezcel.wixsite.com/plantmorphology) This link has more Information about how this App works & why this this technique is important
+
 ### About
 
 This application, in conjunction with a separate image matching software I am also developing, is a reliable way to identify different plant species. It adds an additional degree of certainty to image matching methods and human visual perception alone.
@@ -27,7 +29,7 @@ The Plant query works, but I only did and ```INSERT``` for 2 plants, each having
         Server Password: You will need your own Password, ```yourserverpw``` is a place holder for the reader
 
         In other Repo's and later C#/Server Projects, I don't hard code any PW into the software.
-        
+
 ```c
 private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
 ```
