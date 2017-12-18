@@ -24,21 +24,23 @@ This application was developed in VB.NET because my initial audience consisted o
 The Plant query works, but the list of plant observations are empty. You will have to use the App's ```Add Observation``` button to enter your own samples.
 
     Note:    
-        File: VisualStudio-Csharp-plantid\DichotomousPlant\ConnectionClass.cs
-        Line: 21-ish
-        Server Password: You will need your own Password, ```yourserverpw``` is a place holder for the reader
+
+        Server Password: You will need your own Password, ```yourserverpw``` is a place holder for the reader.
 
         In other Repo's and later C#/Server Projects, I don't hard code any PW into the software.
-
+File: VisualStudio-Csharp-plantid\DichotomousPlant\ConnectionClass.cs
+Line: 21-ish
 ```c
 /* C# mysql connector hack */
 private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
 ```
 
-The Add ```New species``` Form needs to be Fixed
-    The original worked for MsSql and MySql. It was this form I used to build the Morphology in the Sql Server.
-    For now I will have to hand type it until my testbech is working properly again.
+* The Add ```New species``` Form needs to be Fixed
+* The original worked for MsSql and MySql. It was this form I used to build the Morphology in the Sql Server.
+* For now I will have to hand type it until my testbech is working properly again.
 
+File: mysql\MySql_plantdb.sql
+Line: 493-ish
 ```sql
 /* optional hard code MySql data entry technique */
 INSERT INTO `leafMorph` (`leafMorphID`, `species_FK`, `leafArrangement_FK`, `leafStructure_FK`, `leafMargin_FK`, `leafAttachment_FK`, `leafShape_FK`, `leafApex_FK`, `leafBase_FK`, `leafSurfaceTop_FK`, `leafSurfaceBottom_FK`, `leafVenation_FK`, `leafHairsTop_FK`, `leafHairsBottom_FK`) VALUES ('0','0','0','0','0','0','0','0','0','0','0','0','0','0');
