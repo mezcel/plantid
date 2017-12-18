@@ -35,7 +35,7 @@ The Plant query works, but the list of plant observations are empty. You will ha
 private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
 ```
 
-The Plant Add Form needs to be Fixed
+The Add ```New species``` Form needs to be Fixed
     The original worked for MsSql and MySql. It was this form I used to build the Morphology in the Sql Server.
     For now I will have to hand type it until my testbech is working properly again.
 
