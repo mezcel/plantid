@@ -11,7 +11,7 @@ ___Update Disclaimer:___
 
 [Wiki - PlantApp Website](http://mezcel.wixsite.com/plantmorphology) This link has more Information about how this App works & why this this technique is important
 
- [YouTube](https://www.youtube.com/watch?time_continue=4&v=PrrcG2r2R-k): Past Original Stop Point Video
+[YouTube](https://www.youtube.com/watch?time_continue=4&v=PrrcG2r2R-k): Past Original Stop Point Video
 
 ### About
 
@@ -21,31 +21,30 @@ This application was developed in VB.NET because my initial audience consisted o
 
 ### What Works / What Needs Fixed
 
-The Plant query works, but the list of plant observations are empty. You will have to use the App's ```Add Observation``` button to enter your own samples.
+The Plant query works, but the list of plant observations will be empty. You will have to use the App's ```Add Observation``` button to enter your own samples. Observations will be added directly into the MySql Server.
 
     Note:    
 
-        Server Password: You will need your own Password, ```yourserverpw``` is a place holder for the reader.
+        Server Password: You will need your own Password, [yourserverpw] is a place holder for the reader.
 
-        In other Repo's and later C#/Server Projects, I don't hard code any PW into the software.
+        In other Repo's and later C#/Server Projects, I don't hard code PW's into the software.
 
-___File: VisualStudio-Csharp-plantid\DichotomousPlant\ConnectionClass.cs___
+> File: VisualStudio-Csharp-plantid\DichotomousPlant\ConnectionClass.cs
 
-___Line: 21-ish___
+> Line: 21-ish
+
+> ```password``` = yourserverpw
 
 ```c
 /* C# mysql connector hack */
 private static string _globalConnString = "datasource=127.0.0.1;port=3306;username=root;password=yourserverpw;";
 ```
 
-* The Add ```New species``` Form needs to be Fixed
-* The original worked for MsSql and MySql. It was this form I used to build the Morphology in the Sql Server.
-* For now I will have to hand type it until my testbech is working properly again.
+*** Programmatically add record to Server (Optional) ***
 
+> File: mysql\MySql_plantdb.sql
 
-___File: mysql\MySql_plantdb.sql___
-
-___Line: 493-ish___
+> Line: 493-ish
 
 ```sql
 /* optional hard code MySql data entry technique */
