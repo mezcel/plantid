@@ -41,6 +41,11 @@ namespace DichotomousPlant
         {
             InitializeComponent();
 
+            //cboGenus
+            cboGenus.DataSource = getData("SELECT * FROM plantdb.genus;");
+            cboGenus.DisplayMember = "genusName";
+            cboGenus.ValueMember = "genusID";
+
             //cboSpecies
             cboSpecies.DataSource = getData("SELECT * FROM plantdb.species;");
             cboSpecies.DisplayMember = "speciesSymbol";
@@ -320,8 +325,9 @@ namespace DichotomousPlant
             string speciesString = txtSpecies.Text;
             string symbolString = txtSpeciesSymbol.Text;
             string speciesdescriptionString = txtDescription.Text;
+            int genus_FK = (int)cboGenus.SelectedValue; ;
 
-            int genus_FK = 0;
+            //int genus_FK = 0;
 
             // species species_new = new species(speciesString, commonnameString, symbolString, speciesdescriptionString, genus_FK);
             species species_new = new species(speciesString, symbolString, speciesdescriptionString, genus_FK);
@@ -347,6 +353,8 @@ namespace DichotomousPlant
                 {
                     lblConfirmAdd.Text = "'" + speciesString + "' is a duplicate entry";
                 }
+
+                refreshInputs();
             }
             else if (txtSpecies.Text == "") 
             {
@@ -364,7 +372,7 @@ namespace DichotomousPlant
                 lblConfirmAdd.BorderStyle = BorderStyle.Fixed3D;
                 lblConfirmAdd.Text = "!!! Species (input) was left 'Blank/Empty'. !!!";
 
-            }
+            }           
             
         }
 
@@ -385,6 +393,10 @@ namespace DichotomousPlant
             cboSpecies.SelectedValue = 0;
             cboSpecies.SelectedText = "";
             cboSpecies.SelectedIndex = 0;
+
+            cboGenus.SelectedValue = 0;
+            cboGenus.SelectedText = "";
+            cboGenus.SelectedIndex = 0;
 
             cboArrangement.SelectedValue = 0;
             cboArrangement.SelectedText = "";
@@ -467,6 +479,11 @@ namespace DichotomousPlant
         private void btnViewDB_Click(object sender, EventArgs e)
         {
             showConfirmationForm();
+        }
+
+        private void lblAddNewPlant_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

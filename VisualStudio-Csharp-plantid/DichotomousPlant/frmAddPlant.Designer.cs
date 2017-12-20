@@ -83,9 +83,9 @@
             this.lblConfirmEdit = new System.Windows.Forms.Label();
             this.btnViewDB = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShapeModifyDescription = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShapeModifyNewPlant = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rectangleShapeModifyDescription = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.cboGenus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@
             this.cboArrangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboArrangement.FormattingEnabled = true;
             this.cboArrangement.Location = new System.Drawing.Point(25, 223);
-            this.cboArrangement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboArrangement.Margin = new System.Windows.Forms.Padding(4);
             this.cboArrangement.Name = "cboArrangement";
             this.cboArrangement.Size = new System.Drawing.Size(273, 34);
             this.cboArrangement.TabIndex = 44;
@@ -109,7 +109,7 @@
             this.cboStructure.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboStructure.FormattingEnabled = true;
             this.cboStructure.Location = new System.Drawing.Point(25, 265);
-            this.cboStructure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboStructure.Margin = new System.Windows.Forms.Padding(4);
             this.cboStructure.Name = "cboStructure";
             this.cboStructure.Size = new System.Drawing.Size(273, 34);
             this.cboStructure.TabIndex = 43;
@@ -122,7 +122,7 @@
             this.cboHairsTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHairsTop.FormattingEnabled = true;
             this.cboHairsTop.Location = new System.Drawing.Point(25, 641);
-            this.cboHairsTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboHairsTop.Margin = new System.Windows.Forms.Padding(4);
             this.cboHairsTop.Name = "cboHairsTop";
             this.cboHairsTop.Size = new System.Drawing.Size(273, 34);
             this.cboHairsTop.TabIndex = 42;
@@ -135,7 +135,7 @@
             this.cboVenation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboVenation.FormattingEnabled = true;
             this.cboVenation.Location = new System.Drawing.Point(25, 599);
-            this.cboVenation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboVenation.Margin = new System.Windows.Forms.Padding(4);
             this.cboVenation.Name = "cboVenation";
             this.cboVenation.Size = new System.Drawing.Size(273, 34);
             this.cboVenation.TabIndex = 41;
@@ -148,7 +148,7 @@
             this.cboSurfaceTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSurfaceTop.FormattingEnabled = true;
             this.cboSurfaceTop.Location = new System.Drawing.Point(25, 516);
-            this.cboSurfaceTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSurfaceTop.Margin = new System.Windows.Forms.Padding(4);
             this.cboSurfaceTop.Name = "cboSurfaceTop";
             this.cboSurfaceTop.Size = new System.Drawing.Size(273, 34);
             this.cboSurfaceTop.TabIndex = 40;
@@ -161,7 +161,7 @@
             this.cboShape.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboShape.FormattingEnabled = true;
             this.cboShape.Location = new System.Drawing.Point(25, 390);
-            this.cboShape.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboShape.Margin = new System.Windows.Forms.Padding(4);
             this.cboShape.Name = "cboShape";
             this.cboShape.Size = new System.Drawing.Size(273, 34);
             this.cboShape.TabIndex = 39;
@@ -174,7 +174,7 @@
             this.cboAttachment.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAttachment.FormattingEnabled = true;
             this.cboAttachment.Location = new System.Drawing.Point(25, 348);
-            this.cboAttachment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboAttachment.Margin = new System.Windows.Forms.Padding(4);
             this.cboAttachment.Name = "cboAttachment";
             this.cboAttachment.Size = new System.Drawing.Size(273, 34);
             this.cboAttachment.TabIndex = 38;
@@ -188,7 +188,7 @@
             this.cboMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMargin.FormattingEnabled = true;
             this.cboMargin.Location = new System.Drawing.Point(25, 306);
-            this.cboMargin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMargin.Margin = new System.Windows.Forms.Padding(4);
             this.cboMargin.Name = "cboMargin";
             this.cboMargin.Size = new System.Drawing.Size(273, 34);
             this.cboMargin.TabIndex = 37;
@@ -202,7 +202,7 @@
             this.cboHairsBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHairsBottom.FormattingEnabled = true;
             this.cboHairsBottom.Location = new System.Drawing.Point(25, 683);
-            this.cboHairsBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboHairsBottom.Margin = new System.Windows.Forms.Padding(4);
             this.cboHairsBottom.Name = "cboHairsBottom";
             this.cboHairsBottom.Size = new System.Drawing.Size(273, 34);
             this.cboHairsBottom.TabIndex = 46;
@@ -215,7 +215,7 @@
             this.cboSurfaceBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSurfaceBottom.FormattingEnabled = true;
             this.cboSurfaceBottom.Location = new System.Drawing.Point(25, 558);
-            this.cboSurfaceBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSurfaceBottom.Margin = new System.Windows.Forms.Padding(4);
             this.cboSurfaceBottom.Name = "cboSurfaceBottom";
             this.cboSurfaceBottom.Size = new System.Drawing.Size(273, 34);
             this.cboSurfaceBottom.TabIndex = 45;
@@ -359,7 +359,7 @@
             this.cboApex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboApex.FormattingEnabled = true;
             this.cboApex.Location = new System.Drawing.Point(88, 432);
-            this.cboApex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboApex.Margin = new System.Windows.Forms.Padding(4);
             this.cboApex.Name = "cboApex";
             this.cboApex.Size = new System.Drawing.Size(211, 34);
             this.cboApex.TabIndex = 59;
@@ -372,7 +372,7 @@
             this.cboBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBase.FormattingEnabled = true;
             this.cboBase.Location = new System.Drawing.Point(88, 474);
-            this.cboBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboBase.Margin = new System.Windows.Forms.Padding(4);
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(211, 34);
             this.cboBase.TabIndex = 60;
@@ -384,10 +384,10 @@
             this.cboSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSpecies.FormattingEnabled = true;
-            this.cboSpecies.Location = new System.Drawing.Point(871, 124);
-            this.cboSpecies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSpecies.Location = new System.Drawing.Point(884, 124);
+            this.cboSpecies.Margin = new System.Windows.Forms.Padding(4);
             this.cboSpecies.Name = "cboSpecies";
-            this.cboSpecies.Size = new System.Drawing.Size(160, 34);
+            this.cboSpecies.Size = new System.Drawing.Size(140, 34);
             this.cboSpecies.TabIndex = 61;
             // 
             // lblExistingSpecies
@@ -407,7 +407,7 @@
             this.pbxImages.BackColor = System.Drawing.Color.White;
             this.pbxImages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImages.Location = new System.Drawing.Point(649, 228);
-            this.pbxImages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxImages.Margin = new System.Windows.Forms.Padding(4);
             this.pbxImages.Name = "pbxImages";
             this.pbxImages.Size = new System.Drawing.Size(533, 492);
             this.pbxImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -420,7 +420,7 @@
             this.rdoArrangement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoArrangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoArrangement.Location = new System.Drawing.Point(503, 228);
-            this.rdoArrangement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoArrangement.Margin = new System.Windows.Forms.Padding(4);
             this.rdoArrangement.Name = "rdoArrangement";
             this.rdoArrangement.Size = new System.Drawing.Size(143, 26);
             this.rdoArrangement.TabIndex = 65;
@@ -436,7 +436,7 @@
             this.rdoStructure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoStructure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoStructure.Location = new System.Drawing.Point(503, 270);
-            this.rdoStructure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoStructure.Margin = new System.Windows.Forms.Padding(4);
             this.rdoStructure.Name = "rdoStructure";
             this.rdoStructure.Size = new System.Drawing.Size(143, 26);
             this.rdoStructure.TabIndex = 66;
@@ -452,7 +452,7 @@
             this.rdoMargin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMargin.Location = new System.Drawing.Point(503, 311);
-            this.rdoMargin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoMargin.Margin = new System.Windows.Forms.Padding(4);
             this.rdoMargin.Name = "rdoMargin";
             this.rdoMargin.Size = new System.Drawing.Size(143, 26);
             this.rdoMargin.TabIndex = 67;
@@ -468,7 +468,7 @@
             this.rdoAttachment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoAttachment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoAttachment.Location = new System.Drawing.Point(503, 353);
-            this.rdoAttachment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoAttachment.Margin = new System.Windows.Forms.Padding(4);
             this.rdoAttachment.Name = "rdoAttachment";
             this.rdoAttachment.Size = new System.Drawing.Size(143, 26);
             this.rdoAttachment.TabIndex = 68;
@@ -484,7 +484,7 @@
             this.rdoShape.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoShape.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoShape.Location = new System.Drawing.Point(503, 395);
-            this.rdoShape.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoShape.Margin = new System.Windows.Forms.Padding(4);
             this.rdoShape.Name = "rdoShape";
             this.rdoShape.Size = new System.Drawing.Size(143, 26);
             this.rdoShape.TabIndex = 69;
@@ -500,7 +500,7 @@
             this.rdoApex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoApex.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoApex.Location = new System.Drawing.Point(503, 437);
-            this.rdoApex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoApex.Margin = new System.Windows.Forms.Padding(4);
             this.rdoApex.Name = "rdoApex";
             this.rdoApex.Size = new System.Drawing.Size(143, 26);
             this.rdoApex.TabIndex = 70;
@@ -516,7 +516,7 @@
             this.rdoSurface.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoSurface.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoSurface.Location = new System.Drawing.Point(503, 542);
-            this.rdoSurface.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoSurface.Margin = new System.Windows.Forms.Padding(4);
             this.rdoSurface.Name = "rdoSurface";
             this.rdoSurface.Size = new System.Drawing.Size(143, 26);
             this.rdoSurface.TabIndex = 71;
@@ -532,7 +532,7 @@
             this.rdoVenation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoVenation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoVenation.Location = new System.Drawing.Point(503, 604);
-            this.rdoVenation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoVenation.Margin = new System.Windows.Forms.Padding(4);
             this.rdoVenation.Name = "rdoVenation";
             this.rdoVenation.Size = new System.Drawing.Size(143, 26);
             this.rdoVenation.TabIndex = 73;
@@ -548,7 +548,7 @@
             this.rdoHairs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoHairs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoHairs.Location = new System.Drawing.Point(503, 666);
-            this.rdoHairs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoHairs.Margin = new System.Windows.Forms.Padding(4);
             this.rdoHairs.Name = "rdoHairs";
             this.rdoHairs.Size = new System.Drawing.Size(143, 26);
             this.rdoHairs.TabIndex = 74;
@@ -581,13 +581,14 @@
             this.lblAddNewPlant.TabIndex = 76;
             this.lblAddNewPlant.Text = "Add a New Plant Leaf To Database";
             this.lblAddNewPlant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAddNewPlant.Click += new System.EventHandler(this.lblAddNewPlant_Click);
             // 
             // lblNewSpecies
             // 
             this.lblNewSpecies.AutoSize = true;
             this.lblNewSpecies.BackColor = System.Drawing.Color.Transparent;
             this.lblNewSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewSpecies.Location = new System.Drawing.Point(161, 76);
+            this.lblNewSpecies.Location = new System.Drawing.Point(204, 78);
             this.lblNewSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewSpecies.Name = "lblNewSpecies";
             this.lblNewSpecies.Size = new System.Drawing.Size(74, 20);
@@ -611,7 +612,7 @@
             this.lblSymbol.AutoSize = true;
             this.lblSymbol.BackColor = System.Drawing.Color.Transparent;
             this.lblSymbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSymbol.Location = new System.Drawing.Point(323, 75);
+            this.lblSymbol.Location = new System.Drawing.Point(394, 76);
             this.lblSymbol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSymbol.Name = "lblSymbol";
             this.lblSymbol.Size = new System.Drawing.Size(69, 20);
@@ -623,7 +624,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(464, 75);
+            this.lblDescription.Location = new System.Drawing.Point(488, 76);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(165, 20);
@@ -636,46 +637,46 @@
             this.btnAddNewSpecies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNewSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewSpecies.Location = new System.Drawing.Point(689, 78);
-            this.btnAddNewSpecies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddNewSpecies.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNewSpecies.Name = "btnAddNewSpecies";
             this.btnAddNewSpecies.Size = new System.Drawing.Size(136, 92);
             this.btnAddNewSpecies.TabIndex = 83;
-            this.btnAddNewSpecies.Text = "Add New Species";
+            this.btnAddNewSpecies.Text = "Add New Species To Species Dropdown";
             this.btnAddNewSpecies.UseVisualStyleBackColor = false;
             this.btnAddNewSpecies.Click += new System.EventHandler(this.btnAddNewSpecies_Click);
             // 
             // txtSpecies
             // 
-            this.txtSpecies.Enabled = false;
+            this.txtSpecies.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpecies.Location = new System.Drawing.Point(165, 102);
-            this.txtSpecies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpecies.Location = new System.Drawing.Point(208, 124);
+            this.txtSpecies.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpecies.Multiline = true;
             this.txtSpecies.Name = "txtSpecies";
-            this.txtSpecies.Size = new System.Drawing.Size(132, 64);
+            this.txtSpecies.Size = new System.Drawing.Size(182, 34);
             this.txtSpecies.TabIndex = 84;
             // 
             // txtSpeciesSymbol
             // 
-            this.txtSpeciesSymbol.Enabled = false;
+            this.txtSpeciesSymbol.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSpeciesSymbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpeciesSymbol.Location = new System.Drawing.Point(327, 100);
-            this.txtSpeciesSymbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpeciesSymbol.Location = new System.Drawing.Point(398, 124);
+            this.txtSpeciesSymbol.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpeciesSymbol.Multiline = true;
             this.txtSpeciesSymbol.Name = "txtSpeciesSymbol";
-            this.txtSpeciesSymbol.Size = new System.Drawing.Size(132, 66);
+            this.txtSpeciesSymbol.Size = new System.Drawing.Size(87, 34);
             this.txtSpeciesSymbol.TabIndex = 86;
             // 
             // txtDescription
             // 
-            this.txtDescription.Enabled = false;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(468, 100);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Location = new System.Drawing.Point(492, 124);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(207, 67);
+            this.txtDescription.Size = new System.Drawing.Size(183, 34);
             this.txtDescription.TabIndex = 87;
             // 
             // btnAddNewDescription
@@ -684,11 +685,11 @@
             this.btnAddNewDescription.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNewDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewDescription.Location = new System.Drawing.Point(1040, 78);
-            this.btnAddNewDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddNewDescription.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNewDescription.Name = "btnAddNewDescription";
             this.btnAddNewDescription.Size = new System.Drawing.Size(249, 92);
             this.btnAddNewDescription.TabIndex = 88;
-            this.btnAddNewDescription.Text = "Add Additional Description to Selected Species";
+            this.btnAddNewDescription.Text = "Add Morph Decription To Selected Species";
             this.btnAddNewDescription.UseVisualStyleBackColor = false;
             this.btnAddNewDescription.Click += new System.EventHandler(this.btnAddNewDescription_Click);
             // 
@@ -698,7 +699,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(1191, 635);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(121, 85);
             this.btnClose.TabIndex = 90;
@@ -711,7 +712,7 @@
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(1191, 321);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(121, 306);
             this.btnReset.TabIndex = 91;
@@ -725,7 +726,7 @@
             this.rdoBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdoBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoBase.Location = new System.Drawing.Point(503, 479);
-            this.rdoBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoBase.Margin = new System.Windows.Forms.Padding(4);
             this.rdoBase.Name = "rdoBase";
             this.rdoBase.Size = new System.Drawing.Size(143, 26);
             this.rdoBase.TabIndex = 92;
@@ -766,7 +767,7 @@
             this.btnViewDB.Font = new System.Drawing.Font("Wingdings", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnViewDB.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnViewDB.Location = new System.Drawing.Point(1191, 229);
-            this.btnViewDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewDB.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewDB.Name = "btnViewDB";
             this.btnViewDB.Size = new System.Drawing.Size(121, 85);
             this.btnViewDB.TabIndex = 95;
@@ -786,14 +787,6 @@
             this.shapeContainer1.TabIndex = 89;
             this.shapeContainer1.TabStop = false;
             // 
-            // rectangleShapeModifyDescription
-            // 
-            this.rectangleShapeModifyDescription.BackColor = System.Drawing.Color.Transparent;
-            this.rectangleShapeModifyDescription.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShapeModifyDescription.Location = new System.Drawing.Point(640, 16);
-            this.rectangleShapeModifyDescription.Name = "rectangleShapeModifyDescription";
-            this.rectangleShapeModifyDescription.Size = new System.Drawing.Size(342, 127);
-            // 
             // rectangleShapeModifyNewPlant
             // 
             this.rectangleShapeModifyNewPlant.BackColor = System.Drawing.Color.Transparent;
@@ -802,13 +795,25 @@
             this.rectangleShapeModifyNewPlant.Name = "rectangleShapeModifyNewPlant";
             this.rectangleShapeModifyNewPlant.Size = new System.Drawing.Size(610, 127);
             // 
-            // comboBox1
+            // rectangleShapeModifyDescription
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Location = new System.Drawing.Point(25, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
+            this.rectangleShapeModifyDescription.BackColor = System.Drawing.Color.Transparent;
+            this.rectangleShapeModifyDescription.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShapeModifyDescription.Location = new System.Drawing.Point(640, 16);
+            this.rectangleShapeModifyDescription.Name = "rectangleShapeModifyDescription";
+            this.rectangleShapeModifyDescription.Size = new System.Drawing.Size(342, 127);
+            // 
+            // cboGenus
+            // 
+            this.cboGenus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboGenus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGenus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGenus.FormattingEnabled = true;
+            this.cboGenus.Location = new System.Drawing.Point(25, 124);
+            this.cboGenus.Margin = new System.Windows.Forms.Padding(4);
+            this.cboGenus.Name = "cboGenus";
+            this.cboGenus.Size = new System.Drawing.Size(175, 34);
+            this.cboGenus.TabIndex = 0;
             // 
             // frmAddPlant
             // 
@@ -816,7 +821,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1333, 774);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboGenus);
             this.Controls.Add(this.btnViewDB);
             this.Controls.Add(this.lblConfirmEdit);
             this.Controls.Add(this.lblConfirmAdd);
@@ -873,7 +878,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddPlant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Morphology Editor";
@@ -942,6 +947,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShapeModifyNewPlant;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShapeModifyDescription;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboGenus;
     }
 }
