@@ -4,9 +4,9 @@
 ---
 ___Update Disclaimer:___
 
-    I initially posted this Repo before I understood the power of Git, let alone how to use Git. This has been many months before this 'Resurrected Legacy Version'. Three PCs later and numerous factory restores on each, I revisited my code snippets posted on Github (they were only script files, not full project repo's). I discovered there was a mismatch between the Visual Studio Project and the Sql Files. I had uploaded the wrong or a WIP ```script file notes```.
+    I initially posted this Repo before I understood the power of Git, let alone how to use Git. This repo contained notes and milestones needed to recreate the plantid app. +1 year later I decided to rebuild the app as an executable repo.
 
-    What I am doing now is cutting my losses and making a working version for Git. For now I will keep the ```Sql ER``` the same, even though my original had ```views``` and ```sql logic``` for efficient interfacing between the Plant Add Form and the Plant Query Form.
+    This version is not as complete as my previous "original final version", but this version works. It was a good review on MySql Connector.
 ---
 
 [Wiki - PlantApp Website](http://mezcel.wixsite.com/plantmorphology) This link has more Information about how this App works & why this this technique is important
